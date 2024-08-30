@@ -1,0 +1,51 @@
+{% extends "main.html" %}
+{% block title %}Information{% endblock %}
+{% block links %}
+    <!-- <link rel="stylesheet" href="../static/css/form.css"> -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/info.css">
+    <!-- <link rel="stylesheet" href="../static/css/home.css"> -->
+    <!-- <link rel="stylesheet" href="../static/css/contact.css"> -->
+{% endblock %}
+
+{% block main %}
+    <h1 class="heading-info">Information of Parameters</h1>
+    <details>
+        <summary>
+            <span class="num">1</span><span class="title-info">Hypertension</span>
+        </summary>
+        <p>Hypertension, commonly known as high blood pressure, is a chronic medical condition characterized by elevated pressure in the arteries. It can lead to serious health complications such as heart disease, stroke, and kidney failure if left untreated. Lifestyle modifications, medication, and regular monitoring are essential in managing hypertension and reducing its associated risks.</p>
+    </details>
+    <details>
+        <summary>
+            <span class="num">2</span><span class="title-info">Heart Disease</span>
+        </summary>
+        <p>Heart disease encompasses a range of conditions that affect the heart, including coronary artery disease, heart rhythm problems, and congenital heart defects. It's a leading cause of death worldwide, often linked to lifestyle factors like smoking, poor diet, and lack of exercise. Early detection and lifestyle changes can significantly reduce the risk of developing heart disease.</p>
+    </details>
+    <details>
+        <summary>
+            <span class="num">3</span><span class="title-info">Glucose Level</span>
+        </summary>
+        <p>Glucose level refers to the concentration of glucose (sugar) in the bloodstream, typically measured in milligrams per deciliter (mg/dL) or millimoles per liter (mmol/L). It plays a crucial role in maintaining energy balance within the body, serving as the primary source of fuel for cellular functions. Normal glucose levels are vital for overall health, while imbalances can lead to conditions such as diabetes mellitus. Regular monitoring and management of glucose levels are essential for individuals to maintain optimal health.</p>
+    </details>
+    <details>
+        <summary>
+            <span class="num">4</span><span class="title-info">Body Mass Index (BMI)</span>
+        </summary>
+        <p>Body Mass Index (BMI) is a widely used measure that estimates body fat based on height and weight. It provides a numerical value indicating whether an individual is underweight, normal weight, overweight, or obese. While it's a convenient tool for assessing health risks associated with weight, it doesn't account for factors like muscle mass or distribution of fat.</p>
+    </details>       
+    <details>
+        <summary>
+            <span class="num">5</span><span class="title-info">Smoking</span>
+        </summary>
+        <p>Smoking, a habit fraught with health risks, remains a prevalent global issue despite widespread awareness. Its addictive nature often ensnares individuals, leading to respiratory ailments, cardiovascular diseases, and an increased risk of cancer. Efforts to curb smoking have been ongoing, emphasizing the importance of public education, regulatory measures, and support for cessation programs to mitigate its harmful effects on both individuals and society.</p>
+    </details>
+    <details>
+        <summary>
+            <span class="num">6</span><span class="title-info">Brain Stroke</span>
+        </summary>
+        <p>A brain stroke, also known as a cerebrovascular accident (CVA), occurs when blood flow to a part of the brain is interrupted, leading to damage or death of brain cells. It can result from a blockage (ischemic stroke) or a rupture (hemorrhagic stroke) in the blood vessels supplying the brain. Prompt medical attention is crucial to minimize long-term disability and increase the chances of recovery.</p>
+    </details>
+    <!-- <button id="scroll-to-top"><i class="zmdi zmdi-long-arrow-up"></i></button>
+    <script src="{{ url_for('static', filename='js/scroll-to-top.js') }}"></script> -->
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends "main.html" %}
+{% block title %}Make Prediction{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href="../static/css/form.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/predict.css">
+{% endblock %}
+
+    
+{% block main %}
+    <div class="container">
+        <div class="formView">
+            <h1 class="heading">Make Prediction</h1>
+            <form action="prediction-data" method="post">
+                <div class="formItem">
+                    <label for="patient_name" class="form-label">Name</label>
+                    <input type="text" name="patient_name" id="patient_name" placeholder="Enter Patient Name" required>
+                </div>
+    
+                <div class="formItem">
+                    <label for="patient_mail" class="form-label">Patient Email</label>
+                    <input type="email" name="patient_mail" id="patient_mail" placeholder="Enter Patient Email id" required>
+                </div>
+                
+                <div class="formItem">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" name="age" id="age" placeholder="Enter Patient Age in Years" min="1" max="120" required>
+                </div>
+
+                <div class="formItem">
+                    <label class="form-label">Gender</label>
+                    <input type="radio" name="gender" id="gender_male" value="Male">
+                    <label for="gender_male" class="form_radio_field">Male</label>
+                    <input type="radio" name="gender" id="gender_female" value="Female">
+                    <label for="gender_female" class="form_radio_field">Female</label>
+                <!-- </div>
+
+                <div class="formItem"> -->
+                    <label class="form-label">Hyper-Tension</label>
+                    <input type="radio" name="hyper_tension" id="hyper_tension_yes" class="yes" value="Yes">
+                    <label for="hyper_tension_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="hyper_tension" id="hyper_tension_no" class="no" value="No">
+                    <label for="hyper_tension_no" class="form_radio_field">No</label>
+                    
+                </div>
+    
+                <div class="formItem">
+                    
+                    <label class="form-label">Heart Disease</label>
+                    <input type="radio" name="heart_disease" id="heart_disease_yes" class="yes" value="Yes">
+                    <label for="heart_disease_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="heart_disease" id="heart_disease_no" class="no" value="No">
+                    <label for="heart_disease_no" class="form_radio_field">No</label>
+                <!-- </div>
+
+                <div class="formItem"> -->
+                    <label class="form-label">Ever Married</label>
+                    <input type="radio" name="ever_married" id="ever_married_yes" class="yes" value="Yes">
+                    <label for="ever_married_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="ever_married" id="ever_married_no" class="no" value="No">
+                    <label for="ever_married_no" class="form_radio_field">No</label>
+                </div>
+    
+                <div class="formItem">
+                    
+                    <label class="form-label">Residence Type</label>
+                    <input type="radio" name="residence_type" id="residence_type_rural" class="yes" value="Yes">
+                    <label for="residence_type_rural" class="form_radio_field">Rural</label>
+                    <input type="radio" name="residence_type" id="residence_type_urban" class="no" value="No">
+                    <label for="residence_type_urban" class="form_radio_field">Urban</label>
+                </div>
+                <!-- <div class="formItem">
+                    <label class="form-label">Work Type</label>
+
+                    <select name="work_type" id="work_type" required>
+                        <option value="private">Private</option>
+                        <option value="self_employed">Self-Employed</option>
+                        <option value="govt_job">Govt. Job</option>
+                        <option value="children">Children</option>
+                        <option value="never_worked">Never Worked</option>
+                    </select>
+                </div> -->
+                <div class="formItem">
+
+                    <label class="form-label">Smoking</label>
+                    <select name="smoke" id="smoke" required>
+                        <option value="smoked">Smokes</option>
+                        <option value="formerly_smoked">Formerly Smoked</option>
+                        <option value="never_smoked">Never Smoked</option>
+                    </select>
+                </div>
+
+    
+                <div class="formItem">
+                    
+                   
+                    <label class="form-label">Average Glucose Level</label>
+                    <input type="text" name="avg_glucose_level" id="avg_glucose_level_yes" min="0" step="0.1"/>
+
+        
+                    
+                </div>
+                <div class="formItem">
+                    
+
+                    <label class="form-label">Body Mass Index (BMI)</label>
+                    <input type="number" name="bmi" id="bmi_yes" min="0" step="0.1"/>
+                    
+                </div>
+    
+    
+                <div class="formItem">
+                    <button type="submit">Predict</button>
+                    <button type="reset">Clear</button>
+                </div>
+                <div class="result1">
+                    <p class="text1">Result</p>
+                    <p class="safe"> {{data1}} </p>
+                    <p class="die"> {{data2}} </p>
+                </div> 
+            </form>
+        </div>
+    </div>
+{% endblock %}
